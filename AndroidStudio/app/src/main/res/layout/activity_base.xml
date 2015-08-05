@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical" 
     >
-   <FrameLayout 
+   <FrameLayout
+       android:id="@+id/title_bar"
         android:background="@drawable/title_bar"
         android:layout_width="match_parent"
         android:layout_height="45dip">

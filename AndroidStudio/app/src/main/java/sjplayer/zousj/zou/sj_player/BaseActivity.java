@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View.OnClickListener;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
@@ -13,6 +14,7 @@ public abstract class BaseActivity extends Activity {
     private TextView tv_title;
     private Button btn_right;
     private LinearLayout ll_child_content;
+    private FrameLayout title_bar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +55,7 @@ public abstract class BaseActivity extends Activity {
         tv_title = (TextView) findViewById(R.id.tv_title);
         btn_right = (Button) findViewById(R.id.btn_right);
         ll_child_content = (LinearLayout) findViewById(R.id.ll_child_content);
+        title_bar = (FrameLayout) findViewById(R.id.title_bar);
         //添加子类布局文件
         View child = setContentView();
         if (child != null) {
@@ -88,6 +91,14 @@ public abstract class BaseActivity extends Activity {
      */
     public void setRightButton(int visibility){
         btn_right.setVisibility(visibility);
+    }
+
+    /**
+     * 设置标题栏是否隐藏
+     * @param visibility
+     */
+    public void setTitleBar(int visibility){
+      title_bar.setVisibility(visibility);
     }
     public void rightButtonClick() {
 

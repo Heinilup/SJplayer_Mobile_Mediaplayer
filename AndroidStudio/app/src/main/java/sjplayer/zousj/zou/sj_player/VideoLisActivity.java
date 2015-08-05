@@ -60,7 +60,8 @@ public class VideoLisActivity extends BaseActivity {
 		});
 		//Load the media data from MediaStore.Video.Media.EXTERNAL_CONTENT_URI 加载视频数据
 		getAllVideo();
-	}
+			}
+
 	private class VideoListAdapter extends BaseAdapter{
 
 		@Override

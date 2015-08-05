@@ -5,6 +5,7 @@ import android.media.MediaPlayer.OnPreparedListener;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
 
@@ -16,8 +17,9 @@ public class VideoPlayerActivity extends BaseActivity {
     @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setTitleBar(View.GONE);
 		setRightButton(View.GONE);
-		videoView = (VideoView) findViewById(R.id.ac_video);
+		videoView = (VideoView) findViewById(R.id.ac_video_play);
 	//得到播放地址
 	uri = getIntent().getData();
 	videoView.setVideoURI(uri);
@@ -31,6 +33,8 @@ public class VideoPlayerActivity extends BaseActivity {
 		}
 		
 	});
+		//添系统集成加控制栏
+		videoView.setMediaController(new MediaController(this));
 	}
 	@Override
 	public View setContentView() {
@@ -38,7 +42,7 @@ public class VideoPlayerActivity extends BaseActivity {
 	}
 	@Override
 	public void rightButtonClick(){
-		Toast.makeText(this, "右边点击按键成功", Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, getString(R.string.right_button_click), Toast.LENGTH_SHORT).show();
 	}
 	@Override
 	public void leftButtonClick(){

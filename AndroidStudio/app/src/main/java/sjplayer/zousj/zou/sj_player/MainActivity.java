@@ -93,7 +93,7 @@ public class MainActivity extends BaseActivity {
     }
     @Override
     public void rightButtonClick(){
-        Toast.makeText(this, "右边点击按键成功", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,  getString(R.string.right_button_click), Toast.LENGTH_SHORT).show();
     }
     @Override
     public void leftButtonClick(){
