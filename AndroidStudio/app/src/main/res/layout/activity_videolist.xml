@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+  <ListView 
+      android:id="@+id/lv_videolist"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      ></ListView>
+    <TextView 
+        android:id="@+id/lv_novideo"
+        android:layout_centerInParent="true"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:text="@string/thereisnovideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+</RelativeLayout>
+ 
