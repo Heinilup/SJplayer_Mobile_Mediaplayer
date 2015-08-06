@@ -34,7 +34,7 @@ public class VideoLisActivity extends BaseActivity {
 				lv_novideo.setVisibility(View.VISIBLE);
 			}
 
-		};
+		}
 	};
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class VideoLisActivity extends BaseActivity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				//¸ù¾İµã»÷Î»ÖÃpositionÈ¡³ö¶ÔÓ¦ĞÅÏ¢
+				//æ ¹æ®ç‚¹å‡»ä½ç½®positionå–å‡ºå¯¹åº”ä¿¡æ¯
 			VideoItem videoItem = videoItems.get(position);
 			Intent intent= new Intent(VideoLisActivity.this, VideoPlayerActivity.class);
 			intent.setData(Uri.parse(videoItem.getData()));
@@ -58,7 +58,7 @@ public class VideoLisActivity extends BaseActivity {
 			}
 
 		});
-		//Load the media data from MediaStore.Video.Media.EXTERNAL_CONTENT_URI ¼ÓÔØÊÓÆµÊı¾İ
+		//Load the media data from MediaStore.Video.Media.EXTERNAL_CONTENT_URIåŠ è½½è§†é¢‘æ•°æ®
 		getAllVideo();
 			}
 
@@ -81,11 +81,11 @@ public class VideoLisActivity extends BaseActivity {
         holder.vi_name = (TextView) view.findViewById(R.id.vi_name);
         holder.vi_duration = (TextView) view.findViewById(R.id.vi_duration);
         holder.vi_size = (TextView) view.findViewById(R.id.vi_size);
-	    //¶ÔÏó¹ØÏµ
+	    //å¯¹è±¡å…³ç³»
         view.setTag(holder);
 		
 		}
-	   //¸ù¾İÎ»ÖÃ£¬µÃµ½¾ßÌåÄ³Ò»¸öÊÓÆµµÄĞÅÏ¢
+	   //æ ¹æ®ä½ç½®å¾—åˆ°å…·ä½“æŸä¸€ä¸ªè§†é¢‘ä¿¡æ¯
         VideoItem videoItem = videoItems.get(position);
         holder.vi_name.setText(videoItem.getTitle());
         holder.vi_duration.setText(utils.stringForTime(Integer.valueOf(videoItem.getDuration())));
@@ -113,14 +113,14 @@ public class VideoLisActivity extends BaseActivity {
 		TextView vi_size;
 	}
 	/**
-	 * ÔÚ×ÓÏß³Ì¼ÓÔØÊÓÆµ
+	 * åœ¨å­çº¿ç¨‹åŠ è½½è§†é¢‘
 	 */
 
 	private void getAllVideo() {
 	new Thread(){
 		public void run(){
-		//°Ñ×ÓÏß³ÌÊÓÆµ¶ÁÈ¡³öÀ´
-			videoItems = new ArrayList<VideoItem>();
+		//æŠŠå­çº¿ç¨‹è§†é¢‘è¯»å–å‡ºæ¥
+			videoItems = new ArrayList<>();
 			ContentResolver resolver = getContentResolver();
 			Uri uri = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
 		String[] projection = {
@@ -132,7 +132,7 @@ public class VideoLisActivity extends BaseActivity {
 		Cursor cursor =	resolver.query(uri, projection , null, null, null);
 		while (cursor.moveToNext() ) {
 			long size = cursor.getLong(2);
-			//¾ßÌåÊÓÆµĞÅÏ¢
+			//å…·ä½“è§†é¢‘ä¿¡æ¯
 			if(size> 3*1024*1024){
 				VideoItem item = new VideoItem();
 				
@@ -152,7 +152,7 @@ public class VideoLisActivity extends BaseActivity {
 			}
     }
 		handler.sendEmptyMessage(0);
-		};
+		}
 	}.start();
 		
 	}
@@ -164,7 +164,7 @@ public class VideoLisActivity extends BaseActivity {
 	}
 	@Override
 	public void rightButtonClick(){
-		Toast.makeText(this, "ÓÒ±ßµã»÷°´¼ü³É¹¦", Toast.LENGTH_SHORT).show();
+		Toast.makeText(this, getString(R.string.right_button_click), Toast.LENGTH_SHORT).show();
 	}
 	@Override
 	public void leftButtonClick(){

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true"
-          android:drawable="@drawable/voice_button" /> <!-- pressed -->
+          android:drawable="@drawable/btn_voice_pressed" /> <!-- pressed -->
     <item android:state_focused="true"
-          android:drawable="@drawable/voice_button" /> <!-- focused -->
+          android:drawable="@drawable/btn_voice_pressed" /> <!-- focused -->
           
-    <item android:drawable="@drawable/voice_button_normal" /> <!-- default -->
+    <item android:drawable="@drawable/btn_voice_normal" /> <!-- default -->
 </selector>

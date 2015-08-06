@@ -2,13 +2,13 @@ package sjplayer.zousj.zou.sj_player;
 
 public class VideoItem {
 	
-	//标题
+	//鏍囬
 	private String title;
-	//时长
+	//鏃堕暱
 	private String duration;
-	//文件大小
+	//鏂囦欢澶у皬
 	private long size;
-	//播发地址
+	//鎾斁鍦板潃
 	private String data;
 	public String getTitle() {
 		return title;

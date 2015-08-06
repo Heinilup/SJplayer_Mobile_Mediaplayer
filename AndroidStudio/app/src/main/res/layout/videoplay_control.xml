@@ -1,68 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
     <LinearLayout
-        android:orientation="vertical"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <LinearLayout
+        android:background="@drawable/mediacontroller_seekbar02"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dip"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text="我是标题"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:id="@+id/iv_battery"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/stat_sys_battery_100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_system_time"
+            android:layout_marginTop="2dip"
+            android:layout_marginRight="5dip"
+            android:layout_gravity="center_vertical"
+            android:text="系统时间"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:background="@drawable/video_detail_bg_title"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_voice"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/voice_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <SeekBar
+            android:id="@+id/seekbar_voice"
+            android:layout_gravity="center_vertical"
+            android:maxHeight="6dip"
+            android:minHeight="6dip"
+            android:progressDrawable="@drawable/progress_horizontal"
+            android:thumb="@drawable/progress_thumb"
+            android:layout_weight="1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/switch_player"
+            android:layout_marginLeft="5dip"
+            android:layout_marginRight="5dip"
+            android:background="@drawable/switch_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    </LinearLayout>
 
-            <LinearLayout
-                android:background="@drawable/progress_backpic"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
 
-                <TextView
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="5dip"
-                    android:textColor="#ffffff"
-                    android:textSize="18sp"
-                    android:text="我是标题"
-                    android:layout_weight="1"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content" />
-                <ImageView
-                    android:layout_marginLeft="5dip"
-                    android:layout_marginRight="5dip"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/stat_sys_battery_100"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:layout_marginRight="5dip"
-                    android:layout_gravity="center_vertical"
-                    android:text="系统时间"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-            </LinearLayout>
+
         <LinearLayout
-            android:background="@drawable/progress_backpic"
+            android:background="@drawable/video_detail_bg_title"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <Button
+                android:id="@+id/btn_exit"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_exit_bg_selector"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_back"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_back_selector"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_play_pause"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_pause_selector"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_forward"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_forward_selector"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/btn_fullscreen"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btn_full_screen_selector"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_above="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mediacontroller_seekbar02">
+            <TextView
+                android:textColor="#ffffff"
+                android:id="@+id/tv_current_time"
+                android:layout_marginLeft="5dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="开始时间" />
+
+            <SeekBar
+                android:id="@+id/seekbar_video"
                 android:layout_marginLeft="5dip"
                 android:layout_marginRight="5dip"
-                android:background="@drawable/voice_selector"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-            <SeekBar
                 android:layout_gravity="center_vertical"
                 android:maxHeight="6dip"
                 android:minHeight="6dip"
                 android:progressDrawable="@drawable/progress_horizontal"
-                android:thumb="@drawable/progress_button"
+                android:thumb="@drawable/progress_thumb"
                 android:layout_weight="1"
                 android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="false" />
+
+            <TextView
+                android:textColor="#ffffff"
+                android:id="@+id/tv_duration"
+                android:layout_gravity="center_vertical"
+                android:text="总共时长"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
-            <Button
-                android:layout_marginLeft="5dip"
-                android:layout_marginRight="5dip"
-                android:background="@drawable/switch_selector"
-                android:layout_width="45dip"
-                android:layout_height="45dip" />
         </LinearLayout>
     </LinearLayout>
-
 </RelativeLayout>

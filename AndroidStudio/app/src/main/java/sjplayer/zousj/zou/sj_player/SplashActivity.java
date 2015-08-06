@@ -14,7 +14,7 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         isEnterMained = false;
-        //等待2秒进入主界面
+        //寤惰繜2绉掕繘鍏ヤ富椤甸潰
         new Handler().postDelayed(new Runnable() {
 
             @Override
@@ -37,7 +37,7 @@ public class SplashActivity extends Activity {
 
 
 
-    //点击提前进入主程序
+    //鐐瑰嚮鎵撴柇寤惰繜锛屾彁鍓嶈繘鍏ヤ富椤甸潰
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         enterMain();

@@ -18,7 +18,7 @@ public abstract class BaseActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//		requestWindowFeature(Window.FEATURE_NO_TITLE); ÔØapp_themeÀïÃæ×¢ÊÍÁË <item name="android:windowNoTitle">true</item>
+//		requestWindowFeature(Window.FEATURE_NO_TITLE); åœ¨app_themeæ³¨é‡Šäº† <item name="android:windowNoTitle">true</item>
         setContentView(R.layout.activity_base);
         initView();
         setOnclickListener();
@@ -56,37 +56,37 @@ public abstract class BaseActivity extends Activity {
         btn_right = (Button) findViewById(R.id.btn_right);
         ll_child_content = (LinearLayout) findViewById(R.id.ll_child_content);
         title_bar = (FrameLayout) findViewById(R.id.title_bar);
-        //Ìí¼Ó×ÓÀà²¼¾ÖÎÄ¼ş
+        //æ·»åŠ å­ç±»å¸ƒå±€æ–‡ä»¶
         View child = setContentView();
         if (child != null) {
-            //µ¼Èë¸¸Àà°üÎÄ¼ş
+            //å¯¼å…¥çˆ¶ç±»åŒ…æ–‡ä»¶
             LayoutParams params = new LayoutParams(-1, -1);
             ll_child_content.addView(child , params );
         }
 
     }
     /**
-     * Õâ¸ö·½·¨ÓÉº¢×ÓÊµÏÖ
+     * è¿™ä¸ªæ–¹æ³•ç”±å­ç±»å®ç°
      * @return
      */
     public abstract View setContentView();
     /**
-     * ÉèÖÃ×ó±ß°´Å¥×´Ì¬
+     * è®¾ç½®å·¦è¾¹æŒ‰é’®çŠ¶æ€
      * @param visibility
      */
     public void setLeftButton(int visibility){
         btn_left.setVisibility(visibility);
     }
     /**
-     * ÉèÖÃ±êÌâ
-     * @param title ÒªÉèÖÃµÄ±êÌâÄÚÈİ
+     * è®¾ç½®æ ‡é¢˜
+     * @param title
      */
     public void setTitle(String title) {
         tv_title.setText(title);
     }
 
     /**
-     * ÉèÖÃÓÒ±ß°´Å¥×´Ì¬
+     * è®¾ç½®å³è¾¹æŒ‰é’®çŠ¶æ€
      * @param visibility
      */
     public void setRightButton(int visibility){
@@ -94,7 +94,7 @@ public abstract class BaseActivity extends Activity {
     }
 
     /**
-     * ÉèÖÃ±êÌâÀ¸ÊÇ·ñÒş²Ø
+     * è®¾ç½®TitleBarçŠ¶æ€
      * @param visibility
      */
     public void setTitleBar(int visibility){

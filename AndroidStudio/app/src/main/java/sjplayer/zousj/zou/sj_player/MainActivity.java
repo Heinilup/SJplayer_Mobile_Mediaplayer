@@ -18,10 +18,10 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);//Ö´ĞĞ¸¸ÀàonCreate
-        //Òş²Ø×ó°´Å¥
+        super.onCreate(savedInstanceState);//æ‰§è¡Œçˆ¶ç±»
+        //éšè—å·¦ä¾§æŒ‰é’®
         setLeftButton(View.GONE);
-        //ÉèÖÃÖ÷Ò³ÃæµÄ±êÌâ
+        //è®¾ç½®ä¸»é¡µé¢æ ‡é¢˜
         setTitle(getString(R.string.sj_main_title));
         gridView = (GridView) findViewById(R.id.gridview);
         gridView.setAdapter(new MyMainAdapter());
@@ -32,11 +32,11 @@ public class MainActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 switch (position) {
-                    case 0://ÊÓÆµ²¥·ÅÆ÷
+                    case 0://è§†é¢‘æ’­æ”¾å™¨
                         Intent intent = new Intent(MainActivity.this,VideoLisActivity.class);
                         startActivity(intent);
                         break;
-                    case 1://ÊÓÆµ²¥·ÅÆ÷
+                    case 1://éŸ³ä¹æ’­æ”¾å™¨
                         Toast.makeText(getApplicationContext(), "You Click The Right Button", Toast.LENGTH_SHORT).show();
                         break;
 
@@ -66,9 +66,9 @@ public class MainActivity extends BaseActivity {
             }
             else {
                 view= View.inflate(MainActivity.this,R.layout.main_item, null);
-                holder = new ViewHolder();//ÈİÆ÷
+                holder = new ViewHolder();//å®¹å™¨
                 holder.iv_icon = (ImageView) view.findViewById(R.id.iv_icon);
-                //ÈİÆ÷ºÍView¶ÔÓ¦¹ØÏµ±£´æÆğÀ´
+                //å®¹å™¨å’ŒViewå¯¹åº”ä¿å­˜èµ·æ¥
                 view.setTag(holder);
             }
             holder.iv_icon.setImageResource(ids[position]);
@@ -97,7 +97,7 @@ public class MainActivity extends BaseActivity {
     }
     @Override
     public void leftButtonClick(){
-        Toast.makeText(this, "×ó£¡µã³É¹¦", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.clicktopleft), Toast.LENGTH_SHORT).show();
 
     }
     @Override

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true"
-          android:drawable="@drawable/switch_button" /> <!-- pressed -->
+          android:drawable="@drawable/switch_about_selector" /> <!-- pressed -->
     <item android:state_focused="true"
-          android:drawable="@drawable/switch_button" /> <!-- focused -->
+          android:drawable="@drawable/switch_about_selector" /> <!-- focused -->
           
-    <item android:drawable="@drawable/switch_button_normal" /> <!-- default -->
+    <item android:drawable="@drawable/switch_about_selector_normal" /> <!-- default -->
 </selector>

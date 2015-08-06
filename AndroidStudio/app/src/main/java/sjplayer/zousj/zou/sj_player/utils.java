@@ -11,7 +11,7 @@ public class utils {
 
 
 	    public utils() {
-	        // 转换成字符串的时间
+	        // 杞崲瀛楃涓茬殑鏃堕棿
 	        mFormatBuilder = new StringBuilder();
 	        mFormatter = new Formatter(mFormatBuilder, Locale.getDefault());
 
@@ -20,7 +20,7 @@ public class utils {
 
 
 	    /**
-	     * 把毫秒转换成：1:20:30这里形式
+	     * 鎶婃绉掕浆鎹㈡垚1:20:30杩欑鏍煎紡
 	     * @param timeMs
 	     * @return
 	     */

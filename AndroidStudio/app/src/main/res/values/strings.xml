@@ -9,4 +9,5 @@
     <string name="local_video_list">本地视频</string>
     <string name="sj_main_title">SJ影音播放器</string>
     <string name="right_button_click">右边点击按键成功</string>
+    <string name="clicktopleft">已点击左上按钮</string>
 </resources>
